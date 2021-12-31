@@ -33,14 +33,16 @@ function updateLibrary(index){
         let deleteButton = document.createElement('button');
         
         deleteButton.setAttribute("data-id",i);
-        deleteButton.addEventListener("click",removeBook)
+        deleteButton.addEventListener("click",removeBook);
+        deleteButton.classList.add('delete')
+        
         readButton.setAttribute("data-id",i)
         readButton.addEventListener("click",toggleRead)
 
         title.textContent = myLibrary[i].title;
         author.textContent = myLibrary[i].author;
         pages.textContent = myLibrary[i].pages;
-        deleteButton.textContent = 'delete';
+        deleteButton.textContent = 'Delete';
         if(myLibrary[i].read){
             readButton.textContent = 'Read'
         }

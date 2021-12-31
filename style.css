@@ -1,12 +1,22 @@
+*{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
 body{
     display:flex;
     flex-direction: column;
     padding: 0% 25%;
 }
+h1#title{
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    color: black
+}
 #new{
     width: 15%;
     margin-bottom: 10px;
-    margin-top: -10px
+    margin-top: -10px;
+    margin-left: 0px;
 }
 #headers,.book{
     border-bottom: 1px solid #CCC;
@@ -16,6 +26,7 @@ body{
     
 }
 #headers div{
+    font-weight: bold;
     width: 25%;
 }
 .book{
@@ -23,9 +34,25 @@ body{
 }
 .book div{
     width: 25%;
-    max-width: 25%;
-    padding: 15px 0;
+    min-width: 25%;
+    padding: 20px 0;
     overflow-wrap: break-word;
+    vertical-align: middle;
+}
+button{
+    border: none;
+    min-height: 44px;
+    min-width: 10ch;
+    align-self: center;
+    font-size: 1em;
+    padding: .25em .75em;
+    border-radius: 8px;
+}
+button{
+    cursor: pointer;
+}
+button:hover:not(#new){
+    filter: brightness(85%);
 }
 #popupForm{
     display: none;
@@ -37,6 +64,11 @@ body{
     width: 50px
 }
 
+.delete{
+    background-color: #b0221a;
+    color: #fff;
+    border: 0px;
+}
 /* CSS for form, used from mdn webdocs */
 form {
     margin: 0 auto;
